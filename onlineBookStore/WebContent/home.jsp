@@ -15,45 +15,30 @@ table{color: white;
 </style>
 
  <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="heder.css">
+ <link rel="stylesheet" href="header.css">
 <meta charset="ISO-8859-1">
 <title>users</title>
 </head>
 <body>
-<div class="navbar">
-  <a href="#home">Online Book Store</a>
-  <div class="subnav">
-    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#company">Company</a>
-      <a href="#team">Team</a>
-      <a href="#careers">Careers</a>
-    </div>
-  </div> 
-  <div class="subnav">
-    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#bring">Bring</a>
-      <a href="#deliver">Deliver</a>
-      <a href="#package">Package</a>
-      <a href="#express">Express</a>
-    </div>
-  </div> <div class="subnav">
-    <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#link1">Link 1</a>
-      <a href="#link2">Link 2</a>
-      <a href="#link3">Link 3</a>
-      <a href="#link4">Link 4</a>
-    </div>
-  </div>
-  <a href="#contact"> <form action="cart.jsp" method="post">
-          <input type="hidden" name="username" value="${username}" />
-      <input type="submit" value="cart">
-      </form></a>
-</div>
+
 
 <div style="padding:0 16px">
+
+<div class="header">
+  <a href="#default" class="logo">Online Book Store</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">  <form action="cart.jsp" method="post" >
+          <input type="hidden" name="username" value="${username}" />
+      <input type="image" src="images/cart.jpg" width="40" height="50" alt="cart">
+      </form></a>
+  </div>
+</div>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+
 <h1>List of books</h1>
 
 <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
@@ -62,8 +47,9 @@ table{color: white;
          <sql:query dataSource = "${snapshot}" var = "result">
          SELECT * from books;
       </sql:query>
-      <table border="1" width="100%" >
-         <tr>
+    
+      <table border="1" >
+         <tr >
             <th>id</th>
             <th>name</th>
             <th>author</th>
@@ -81,7 +67,8 @@ table{color: white;
                <td > <c:out value = "${row.author}"/></td>
                <td > <c:out value = "${row.price}"/></td>
                 <td > <c:out value = "${row.stock}"/></td>
-               <td ><form action="cart" method="post">
+               <td >
+               <form action="cart" method="post">
            <input type="hidden" name="username" value="${username}" />
              <input type="hidden" name="id" value="${row.id}" />
              <input type="submit" value="add to cart">

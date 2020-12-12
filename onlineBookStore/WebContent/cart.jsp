@@ -24,7 +24,7 @@ join cart c
 on b.id = c.book_id
 where username="<%=username %>"
       </sql:query>
-    <table border="1" width="100%" >
+    <table  border="1" >
          <tr>
             <th>id</th>
             <th>book name</th>
