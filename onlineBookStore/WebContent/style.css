@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+body{
+  background-image: url("images/bg1.jfif");
+  color:white;
+  height: 500px;
+  background-position: center;
+ 
+  background-size: cover;
+  position: relative;
+}
+h1{text-align: center;}
+table {
+	
+	background-color: black;
+}
+span{font-size: 9;
+
+
+}

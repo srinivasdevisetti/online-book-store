@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="heder.css">
+<meta charset="ISO-8859-1">
+<title>new account</title>
+<script src="validation.js"></script>
+<style type="text/css">
+span{font-size: 9;
+color: red;
+}
+</style>
+</head>
+<body >
+
+<div class="navbar">
+  <a href="#home">Online Book Store</a>
+  <div class="subnav">
+    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#company">Company</a>
+      <a href="#team">Team</a>
+      <a href="#careers">Careers</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#bring">Bring</a>
+      <a href="#deliver">Deliver</a>
+      <a href="#package">Package</a>
+      <a href="#express">Express</a>
+    </div>
+  </div> <div class="subnav">
+    <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#link1">Link 1</a>
+      <a href="#link2">Link 2</a>
+      <a href="#link3">Link 3</a>
+      <a href="#link4">Link 4</a>
+    </div>
+  </div>
+  <a href="#contact">Contact</a>
+</div>
+<form name="myform" action="storeuser" method="post" onsubmit="return validateform()">
+ 
+	
+   <h1 >User Account application </h1>
+      <table >
+         <tr>
+            <td>name</td>
+            <td><input type="text" name="name"><span id="sname"></span></td>
+         </tr>
+          <tr>
+            <td>mobile number</td>
+            <td><input type="text" name="number"><span id="numonly"></span></td>
+         </tr>
+          <tr>
+            <td>username</td>
+            <td><input type="text" name="username"><span id="suname"></span></td>
+         </tr>
+          <tr>
+            <td>password</td>
+            <td><input type="text" name="password"><span id="pass"></span></td>
+             <tr>
+            <td>re-enter password</td>
+            <td><input type="text" name="password2"><span id="samepass"></span></span></td>
+         </tr>
+          <tr>
+            <td>Address</td>
+            <td><textarea  name="address" rows="4" cols="50"></textarea></td>
+         </tr>
+          <tr>
+            <td><input type="submit"></td>
+           
+         </tr>
+       
+      </table>
+      </form>
+       <div id="degign">Designed by Srinivas</div>
+</body>
+</html>
