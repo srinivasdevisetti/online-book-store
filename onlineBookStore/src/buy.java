@@ -124,12 +124,12 @@ public class buy extends HttpServlet {
 	      System.err.println("Got an exception!");
 	      System.err.println(e.getMessage());
 	    } 
-		 String destination = "home.jsp";
+		 String destination = "os.jsp";
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher(destination);
 			request.setAttribute("username", name);
 			requestDispatcher.forward(request, response);
-			response.sendRedirect("os.html");
-response.sendRedirect("os.html");
+		
+
 	}
 
 }
